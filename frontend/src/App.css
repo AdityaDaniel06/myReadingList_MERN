@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  /* background-color: transparent; */
+}
+.bg-myColor {
+  background-image: linear-gradient(to right, #fcfcfc, #e3e6e3);
+}
