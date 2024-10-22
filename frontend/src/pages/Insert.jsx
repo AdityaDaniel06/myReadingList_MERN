@@ -22,20 +22,20 @@ const Insert = () => {
     axios
       .post(api, input)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.status == 201) {
           message.success("Data inserted successfully");
+          setInput({
+            id: "",
+            title: "",
+            author: "",
+            publicationYear: "",
+            genre: "",
+            pages: "",
+            read: "",
+            price: "",
+          });
         }
-        setInput({
-          id: "",
-          title: "",
-          author: "",
-          publicationYear: "",
-          genre: "",
-          pages: "",
-          read: "",
-          price: "",
-        });
       })
       .catch((err) => {
         console.log(err);
@@ -43,8 +43,8 @@ const Insert = () => {
       });
   };
   return (
-    <>
-      <div className="w-50 mx-auto mt-3">
+    <div className="heroSection">
+      <div className="w-50 mx-auto">
         <h2 style={{ color: "#198754" }}>Insert Data </h2>
         <form className="formDesign">
           <Row className="my-3">
@@ -145,7 +145,7 @@ const Insert = () => {
           <Button variant="secondary">Cancel</Button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

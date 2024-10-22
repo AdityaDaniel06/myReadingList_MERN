@@ -18,4 +18,6 @@ router.put("/updateBook/:id", booksController.updateBook);
 // GET = to get a book by id
 router.get("/getBookById/:id", booksController.getBookById);
 
+router.get("/searchBooks/:id", booksController.searchBooks);
+
 module.exports = router;

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const HeaderNav = () => {
   return (
     <>
-      <Navbar bg="myColor" data-bs-theme="light" expand="lg">
+      <Navbar bg="myColor" data-bs-theme="light">
         <Container className="mx-2">
           <Navbar.Brand>
             <h3 className="px-5" style={{ color: "#565656" }}>

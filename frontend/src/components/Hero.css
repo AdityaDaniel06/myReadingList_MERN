@@ -1,5 +1,6 @@
 .heroSection {
-  height: 95vh;
+  height: 88vh;
+  width: 100%;
   background-image: linear-gradient(
       to right,
       rgba(85, 163, 86, 0.8),
@@ -10,7 +11,7 @@
   background-size: cover;
 
   /* clipping edges */
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 }
 
 .headingPrimary {

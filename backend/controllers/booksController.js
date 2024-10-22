@@ -73,7 +73,20 @@ const getBookById = async (req, res) => {
   console.log("getting book by id", req.params.id);
   try {
     const book = await booksModel.findById(req.params.id);
+    // const book = await booksModel.findOne({ id: req.params.id });
     if (!book) return res.status(404).send("No Book found");
+    res.send(book);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+};
+
+const searchBooks = async (req, res) => {
+  console.log("getting book by id", req.params.id);
+  try {
+    const book = await booksModel.findOne({ id: req.params.id });
+    if (!book) return res.send("No Book found");
     res.send(book);
   } catch (error) {
     console.error(error);
@@ -87,4 +100,5 @@ module.exports = {
   deleteBook,
   updateBook,
   getBookById,
+  searchBooks,
 };

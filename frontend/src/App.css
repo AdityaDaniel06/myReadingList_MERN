@@ -7,3 +7,19 @@
 .bg-myColor {
   background-image: linear-gradient(to right, #fcfcfc, #e3e6e3);
 }
+
+.heroSection {
+  height: 88vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(85, 163, 86, 0.8),
+      rgba(23, 121, 75, 0.8)
+    ),
+    url(./images/libraryfilledwithbooks.jpg);
+  background-position: top;
+  background-size: cover;
+
+  /* clipping edges */
+  /* clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); */
+}
