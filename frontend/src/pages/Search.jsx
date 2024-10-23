@@ -82,9 +82,7 @@ const Search = () => {
           </Card>
         </div>
       ) : (
-        <div className="text-center  mx-5 mt-4">
-          No book found with the given ID
-        </div>
+        <div className="text-center mt-5">Please enter valid details.</div>
       )}
     </>
   );

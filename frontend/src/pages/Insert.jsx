@@ -56,6 +56,7 @@ const Insert = () => {
                 className="form-control"
                 type="text"
                 name="id"
+                value={input.id}
                 onChange={handleInput}
               />
             </Col>
@@ -69,6 +70,7 @@ const Insert = () => {
                 className="form-control"
                 type="text"
                 name="title"
+                value={input.title}
                 onChange={handleInput}
               />
             </Col>
@@ -82,6 +84,7 @@ const Insert = () => {
                 className="form-control"
                 type="text"
                 name="author"
+                value={input.author}
                 onChange={handleInput}
               />
             </Col>
@@ -95,6 +98,7 @@ const Insert = () => {
                 className="form-control"
                 type="number"
                 name="publicationYear"
+                value={input.publicationYear}
                 onChange={handleInput}
               />
             </Col>
@@ -108,6 +112,7 @@ const Insert = () => {
                 className="form-control"
                 type="text"
                 name="genre"
+                value={input.genre}
                 onChange={handleInput}
               />
             </Col>
@@ -121,6 +126,7 @@ const Insert = () => {
                 className="form-control"
                 type="number"
                 name="pages"
+                value={input.pages}
                 onChange={handleInput}
               />
             </Col>
@@ -134,6 +140,7 @@ const Insert = () => {
                 className="form-control"
                 type="number"
                 name="price"
+                value={input.price}
                 onChange={handleInput}
               />
             </Col>

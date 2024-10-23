@@ -70,9 +70,9 @@ const EditBook = () => {
 
   return (
     <>
-      <div className="w-50 mx-auto heroSection">
-        <h3 style={{ color: "#198754" }}>Edit Records</h3>
-        <form className="formDesign">
+      <div className="w-50 mx-auto">
+        <h3 style={{ color: "#198754", marginTop: "15px" }}>Edit Records</h3>
+        <form className="formDesign ">
           <Row className="my-3">
             <Col sm={4}>
               <label className="form-label">Enter new ID</label>

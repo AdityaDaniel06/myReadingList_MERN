@@ -21,7 +21,7 @@ const addNewBook = async (req, res) => {
 };
 
 const getAllBook = async (req, res) => {
-  console.log("getting all books");
+  //   console.log("getting all books");
   try {
     const booksData = await booksModel.find();
     res.status(200).send(booksData);
@@ -52,7 +52,7 @@ const deleteBook = async (req, res) => {
 };
 
 const updateBook = async (req, res) => {
-  console.log("getting book by id", req.params.id);
+  //   console.log("getting book by id", req.params.id);
   try {
     const book = await booksModel.findByIdAndUpdate(req.params.id, req.body);
     res.status(200).json({
@@ -70,7 +70,7 @@ const updateBook = async (req, res) => {
 };
 
 const getBookById = async (req, res) => {
-  console.log("getting book by id", req.params.id);
+  //   console.log("getting book by id", req.params.id);
   try {
     const book = await booksModel.findById(req.params.id);
     // const book = await booksModel.findOne({ id: req.params.id });
@@ -83,7 +83,7 @@ const getBookById = async (req, res) => {
 };
 
 const searchBooks = async (req, res) => {
-  console.log("getting book by id", req.params.id);
+  //   console.log("getting book by id", req.params.id);
   try {
     const book = await booksModel.findOne({ id: req.params.id });
     if (!book) return res.send("No Book found");
