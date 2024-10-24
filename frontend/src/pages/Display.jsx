@@ -17,7 +17,7 @@ const Display = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:7000/mybooks/getAllBook"
+        `${import.meta.env.VITE_REACT_BACKEND_BASEURL}/mybooks/getAllBook`
       );
       setBooksData(response.data);
     } catch (err) {
@@ -34,7 +34,11 @@ const Display = () => {
     console.log(id);
     try {
       axios
-        .delete(`http://127.0.0.1:7000/mybooks/deleteBook/${id}`)
+        .delete(
+          `${
+            import.meta.env.VITE_REACT_BACKEND_BASEURL
+          }/mybooks/deleteBook/${id}`
+        )
         .then((res) => {
           message.info("User data deleted successfully");
           fetchData();

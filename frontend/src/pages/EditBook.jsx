@@ -19,7 +19,9 @@ const EditBook = () => {
   };
 
   const fetchData = async () => {
-    const api = `http://127.0.0.1:7000/mybooks/getBookById/${id}`;
+    const api = `${
+      import.meta.env.VITE_REACT_BACKEND_BASEURL
+    }/mybooks/getBookById/${id}`;
     try {
       const response = await axios.get(api);
       console.log(response);
@@ -38,7 +40,9 @@ const EditBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const api = `http://127.0.0.1:7000/mybooks/updateBook/${id}`;
+      const api = `${
+        import.meta.env.VITE_REACT_BACKEND_BASEURL
+      }/mybooks/updateBook/${id}`;
       // Sending the PUT request to update employee data
       axios
         .put(api, input)

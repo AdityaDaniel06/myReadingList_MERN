@@ -15,7 +15,9 @@ const Search = () => {
   const handleSearch = async () => {
     // console.log(input);
 
-    const api = `http://127.0.0.1:7000/mybooks/searchBooks/${input}`;
+    const api = `${
+      import.meta.env.VITE_REACT_BACKEND_BASEURL
+    }/mybooks/searchBooks/${input}`;
     try {
       const response = await axios.get(api);
       setBooksData(response.data);

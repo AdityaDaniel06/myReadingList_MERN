@@ -18,7 +18,9 @@ const Insert = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let api = "http://127.0.0.1:7000/mybooks/addNewBook";
+    let api = `${
+      import.meta.env.VITE_REACT_BACKEND_BASEURL
+    }/mybooks/addNewBook`;
     axios
       .post(api, input)
       .then((res) => {
